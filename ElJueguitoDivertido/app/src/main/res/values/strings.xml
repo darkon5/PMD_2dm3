@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Ultra Flipper Mega Storm Final ReMix and Knuckles</string>
+    <string name="textMode">Modo de juego:</string>
+    <string name="textoX">Cantidad de cajas X</string>
+    <string name="textoY">Cantidad de cajas Y</string>
+    <string name="textoZ">Numero de tramas</string>
+    <!--<string name="textoZ">Tercera opcion la cual desconozco su objetivo:</string>-->
+    <string name="modoNumero">Números</string>
+    <string name="modoColores">Colores</string>
+    <string name="extraOptions">Opciones extra:</string>
+    <string name="optSonido">Sonido</string>
+    <string name="optRumble">Vibración</string>
+    <string name="play">Juegar</string>
+    <string name="m_Jugador">Jugador</string>
+    <string name="m_howto">Como jugar</string>
+    <string name="m_about">Acerca de...</string>
+    <string name="clickTxt">click</string>
+</resources>

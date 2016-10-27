@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="@string/app_name"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="moe.gimme.eljueguitodivertido.menu">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textoX"
+        android:id="@+id/textX" />
+
+    <SeekBar
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/barX"
+        android:max="6"
+        android:progress="0" />
+
+    <TextView
+        android:text="Cantidad de cajas Y"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textY" />
+
+    <SeekBar
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/barY"
+        android:max="6" />
+
+    <TextView
+        android:text="@string/textoZ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textZ" />
+
+    <SeekBar
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/barZ"
+        android:max="4"
+        android:progress="0" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:text="@string/textMode" />
+
+    <RadioGroup
+            android:padding="8dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:text="@string/modoColores"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioColores"
+                android:layout_weight=".50"
+                android:checked="true"
+                android:layout_width="0dp" />
+
+            <RadioButton
+                android:text="Números"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioNumeros"
+                android:layout_weight=".50"
+                android:layout_width="0dp" />
+
+
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:text="Opciones extra:" />
+
+    <LinearLayout
+        android:padding="8dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:text="@string/optSonido"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkSonido"
+            android:layout_weight=".50" />
+
+        <CheckBox
+            android:text="Vibración"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkVibracion"
+            android:layout_weight=".50" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".50" />
+
+    <Button
+        android:layout_marginTop="12dp"
+        android:text="@string/play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:onClick="juegar" />
+
+
+</LinearLayout>
