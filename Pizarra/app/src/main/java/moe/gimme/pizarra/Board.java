@@ -48,6 +48,8 @@ public class Board extends View{
         mCanvas = new Canvas (mBitmap);
         mCanvas.drawColor(0xFFFFFF);
 
+        mPath=  new Path();
+
         mPaint = new Paint();
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeJoin(Paint.Join.ROUND);
@@ -57,13 +59,12 @@ public class Board extends View{
         mPaint.setColor(0xF0F0F0);
 
     }
-
     @Override
-    public boolean onTouchEvent (MotionEvent event){
+    public boolean onTouchEvent (MotionEvent event) {
         float x = event.getX();
         float y = event.getY();
 
-        switch (event.getAction()){
+        switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 touchStart(x,y);
                 invalidate();
@@ -72,31 +73,49 @@ public class Board extends View{
                 touchMove(x,y);
                 invalidate();
                 break;
-            case MotionEvent.ACTION_UP;
+            case MotionEvent.ACTION_UP:
                 touchUp();
                 invalidate();
                 break;
         }
-
         return true;
     }
-
-    private void touchStart(float x, float y){
+    private void touchStart(float x,float y){
         mPath.reset();
         mPath.moveTo(x,y);
         mX=x;
         mY=y;
 
-
     }
-    private void touchMove(float x, float y){
-        if (Math.abs(x-mX)>=TOLERANCE || Math.abs(y-mY)>=TOLERANCE){
-            // preparado para dibujar
+    private void touchMove(float x,float y){
 
-            mPath.quadTo(mX, mY, x, y);
+        if (Math.abs(x-mX)>=TOLERANCE || Math.abs(y-mY)>=TOLERANCE) {
+            mPath.quadTo(mX,mY,(x+mX)/2,(y+mY)/2);
+            mX=x;
+            mY=y;
         }
+
+
+
     }
-    private void touchUp(){
+    private void touchUp() {
+        mPath.lineTo(mX, mY);
+        mCanvas.drawPath(mPath,mPaint);
+        mPath.reset();   // opcional
+
+
+    }
+
+    @Override
+    protected void onDraw (Canvas canvas){
+        //fondo
+        canvas.drawColor(0xFFBBBBBB);
+        //
+        canvas.drawBitmap(mBitmap,0,0,null);
+        // le añadimos el trazo actual
+        canvas.drawPath(mPath,mPaint);
+
+
 
     }
 }
