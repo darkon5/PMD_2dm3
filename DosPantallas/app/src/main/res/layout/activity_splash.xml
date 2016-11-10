@@ -12,20 +12,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="esta es splash"
+        android:text="esta es la primera"
         android:layout_alignParentEnd="true"
         android:textSize="30dp"
         android:id="@+id/textView" />
-
-    <Button
-        style="@style/Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="    go al puto universo    "
-        android:id="@+id/cambiaActivity"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="jump2princi" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -34,4 +24,14 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/textView" />
+
+    <Button
+        style="@style/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="     go to the universe     "
+        android:id="@+id/cambiaActivity"
+        android:onClick="jump2princi"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
