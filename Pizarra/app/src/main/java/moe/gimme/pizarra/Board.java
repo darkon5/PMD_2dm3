@@ -19,7 +19,7 @@ import android.view.WindowManager;
 public class Board extends View{
 
     private Bitmap mBitmap=null;
-    private Canvas mCanvas=null;
+    public static Canvas mCanvas=null;
     private Paint mPaint=null;
 
     private float mX, mY;
@@ -46,7 +46,7 @@ public class Board extends View{
 
         mBitmap = Bitmap.createBitmap(point.x, point.y, Bitmap.Config.ARGB_8888);
         mCanvas = new Canvas (mBitmap);
-        mCanvas.drawColor(0xFFFFFF);
+        mCanvas.drawColor(0xFF000000);
 
         mPath=  new Path();
 
@@ -56,8 +56,7 @@ public class Board extends View{
         mPaint.setStrokeCap(Paint.Cap.ROUND);
         mPaint.setAntiAlias(true);
         mPaint.setDither(true);
-        mPaint.setColor(0xF0F0F0);
-
+        mPaint.setColor(0xFFF0F0F0);
     }
     @Override
     public boolean onTouchEvent (MotionEvent event) {
@@ -85,7 +84,6 @@ public class Board extends View{
         mPath.moveTo(x,y);
         mX=x;
         mY=y;
-
     }
     private void touchMove(float x,float y){
 
@@ -94,16 +92,11 @@ public class Board extends View{
             mX=x;
             mY=y;
         }
-
-
-
     }
     private void touchUp() {
         mPath.lineTo(mX, mY);
         mCanvas.drawPath(mPath,mPaint);
         mPath.reset();   // opcional
-
-
     }
 
     @Override
@@ -114,8 +107,5 @@ public class Board extends View{
         canvas.drawBitmap(mBitmap,0,0,null);
         // le añadimos el trazo actual
         canvas.drawPath(mPath,mPaint);
-
-
-
     }
 }

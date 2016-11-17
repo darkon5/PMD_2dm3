@@ -8,6 +8,10 @@ import android.widget.Toast;
 
 public class Pizarra extends AppCompatActivity {
 
+    private void limpiar(){
+        Board.mCanvas.drawColor(0xFF000000);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +29,8 @@ public class Pizarra extends AppCompatActivity {
     public boolean onOptionsItemSelected (MenuItem item){
         switch (item.getItemId()){
             case R.id.m_Jugador:
-                Toast.makeText(getApplicationContext(),"Le diste al menu nomas",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"¡Huele a pizarra nueva!",Toast.LENGTH_SHORT).show();
+                limpiar();
                 //showJugador();
                 return true;
             case R.id.m_about:
