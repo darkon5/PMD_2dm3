@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/m_Jugador"
+        android:id="@+id/m_limpiar"
         android:title="Limpiar"
         android:icon="@mipmap/ic_launcher"
         />

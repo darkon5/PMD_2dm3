@@ -28,7 +28,7 @@ public class Pizarra extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected (MenuItem item){
         switch (item.getItemId()){
-            case R.id.m_Jugador:
+            case R.id.m_limpiar:
                 Toast.makeText(getApplicationContext(),"¡Huele a pizarra nueva!",Toast.LENGTH_SHORT).show();
                 limpiar();
                 //showJugador();
