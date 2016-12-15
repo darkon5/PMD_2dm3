@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="175dp">
+
+            <TextView
+                android:id="@+id/nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:textSize="24sp"
+                android:text="te" />
+
+            <!--<TextView
+                android:id="@+id/telefono"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:background="?android:selectableItemBackground"
+                android:clickable="false"
+                android:focusable="true"
+                android:paddingLeft="12sp"
+                android:text="tlf" />
+
+            <TextView
+                android:id="@+id/mail"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:background="?android:selectableItemBackground"
+                android:clickable="false"
+                android:focusable="true"
+                android:paddingLeft="12sp"
+                android:text="mail" />
+
+            <TextView
+                android:id="@+id/dni"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:background="?android:selectableItemBackground"
+                android:clickable="false"
+                android:focusable="true"
+                android:paddingLeft="12sp"
+                android:text="dni"
+                android:layout_width="175dp" />-->
+
+        </LinearLayout>
+<!--
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="Editar"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/button3"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:enabled="true"
+                android:onClick="editar" />
+
+            <Button
+                android:text="Llamar 📱"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/button2"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:onClick="llamar" />
+        </RelativeLayout>-->
+    </LinearLayout>
+
+</RelativeLayout>
