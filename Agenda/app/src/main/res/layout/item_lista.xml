@@ -12,7 +12,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_height="wrap_content"
-            android:layout_width="175dp">
+            android:layout_width="match_parent">
 
             <TextView
                 android:id="@+id/nombre"
@@ -20,23 +20,19 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerInParent="true"
-                android:background="?android:selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:textSize="24sp"
-                android:text="te" />
+                android:textSize="18sp"
+                android:text="te"
+                android:textAppearance="@style/Base.Widget.AppCompat.Button" />
 
-            <!--<TextView
+            <TextView
                 android:id="@+id/telefono"
-                android:layout_width="175dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
                 android:layout_alignParentTop="true"
                 android:layout_centerInParent="true"
-                android:background="?android:selectableItemBackground"
-                android:clickable="false"
-                android:focusable="true"
                 android:paddingLeft="12sp"
-                android:text="tlf" />
+                android:text="tlf"
+                android:visibility="invisible"/><!--
 
             <TextView
                 android:id="@+id/mail"
@@ -91,5 +87,21 @@
                 android:onClick="llamar" />
         </RelativeLayout>-->
     </LinearLayout>
+
+    <Button
+        android:text="GPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/button2" />
+
+    <Button
+        android:text="Other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button3" />
 
 </RelativeLayout>
